@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Dataviz Final jorgernes</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    
+    <style>
+            table {
+                border-collapse: collapse;
+                border: 2px black solid;
+                font: 12px sans-serif;
+            }
+
+            td {
+                border: 1px white solid;
+                padding: 5px;
+            }
+        </style>
+  </head>
+  
+  <body>
+  
+     <svg width="100%" height="620" style="padding-left: 7px; "> 
+       <rect class="gray" x="0" y="0"  height="70" width="99%" style="fill: gray; stroke: white; stroke-width:3px; " ></rect>
+       <rect class="red" x="0" y="70" height="605" width="33%" style="fill: red; stroke: white; stroke-width:3px; "></rect>
+       <rect class="blue" x="33%" y="70" height="385" width="33%" style="fill:blue; stroke: white; stroke-width: 3px;"></rect>
+       <rect class="green" x="66%" y="70" height="385" width="33%" style="fill:green; stroke: white; stroke-width: 3px;"></rect>
+       <rect class="orange" x="33%" y="70%" height="200" width="66%" style="fill:orange; stroke: white; stroke-width: 3px;"></rect>
+   </svg>
+   
+   <script>
+       
+        d3.dsv(",", "cacao.csv").then(function(data){
+       
+            d3.select("svg", .orange )
+        
+        });
+       
+       /*d3.dsv(",", "cacao.csv").then(function(data){
+                      console.log(data);
+        });
+       
+       d3.text("cacao.csv", function (data) {
+           var datos = d3.csv.parseRows (data);
+           var tabla = d3.select("rect")
+                        .append("table")
+           
+                    selectAll("tr")
+                        .data(datos)
+                        .enter()
+                        .append("tr") 
+           
+                    selectAll("td")
+                        .data(function (d){ return d;})
+                        .enter()
+                        .append("td")
+                        .text(function(d) {return d;});
+           
+       });*/
+       
+       
+     
+        
+        /*d3.text("text", function (data) {
+           
+           var data = d3.csv.parsedRows(data);
+            
+        
+           var container = d3.select("body").append("table")
+            .selectAll("tr")
+            .data(data)
+            .enter()
+            .append("tr")
+        
+            .selectAll("td")
+            .data(function(d){return d;})
+            .enter()
+            .append("td")
+            .text(function(d) {return d;});
+        });*/
+            
+           
+        
+        
+    </script>
+    
+    <!--<script>
+        
+         d3.select("svg").append("rect")
+                       .attr("class", "gray") 
+                       .append("header")
+                       .text("hola este es un buen cacao")
+                       .style("color", "white");
+                       .style("align", "center");
+    </script>
+       
+        
+    <script>
+        
+         d3.select("svg").append("rect")
+                       .attr("class", "red") 
+                       .append("col-6")
+                       .text("historial ca del cacao")
+                       .style("color", "white")
+                       .style("text-align", "center"
+                       .append("rect1")
+                            .attr("x=50px", "y=50px","width: 100px", "height: 50px")
+                       .append("rect2")
+                            .attr("x=50px", "y=120px","width: 100px", "height: 50px")
+                       .append("rect3")
+                            .attr("x=50px", "y=190px","width: 100px", "height: 50px")
+                       .append("rect4")
+                            .attr("x=50px", "y=260px","width: 100px", "height: 50px");
+                              
+    </script> 
+       
+       
+       <script>
+        
+         d3.select("svg").append("rect")
+                       .attr("class", "blue") 
+                       .append("col")
+                       .text("grafica1 de cacao")
+                       .style("color", "white");
+                       .style("align", "center");
+    </script>
+       
+         <script>
+        
+         d3.select("svg").append("rect")
+                       .attr("class", "green") 
+                       .append("col")
+                       .text("grafica2 de cacao")
+                       .style("color", "white");
+                       .style("text-align", "center");
+    </script> <script>
+        
+         d3.select("svg").append("rect")
+                       .attr("class", "gray") 
+                       .append("header")
+                       .text("hola este es un buen cacao")
+                       .style("color", "white");
+                       .style("align", "center");
+    </script>-->
+    
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
